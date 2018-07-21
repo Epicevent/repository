@@ -83,8 +83,6 @@ def printAllGuGunNameInGuGunList(GuGunList):
 def getLawd_cdByNameInGuGunList(GuGunList, Name):
     if type(GuGunList) is not list:
          print('잘못된 매개변수 입니다. list type을 요구합니다. 현재 타입'+ str(type(GuGunList)))
-
-
     for GuGunDic in GuGunList:
         if (GuGunDic['NAME'] == Name):
             return GuGunDic['CODE']
