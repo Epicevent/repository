@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Lawdcdtest.py" line="84" />
+    <bookmark url="file://$PROJECT_DIR$/Lawdcdtest.py" line="85" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d40a2e50-a636-4eee-8c5f-fbd192e5d60a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lawdcdtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lawdcdtest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naverapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/naverapi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="Lawdcdtest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="170" column="46" selection-start-line="170" selection-start-column="46" selection-end-line="170" selection-end-column="46" />
+            <state relative-caret-position="1011">
+              <caret line="196" column="32" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="32" />
               <folding>
                 <element signature="e#1#16#0" expanded="true" />
               </folding>
@@ -51,7 +50,7 @@
       <file leaf-file-name="AllLawdcd.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AllLawdcd.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="138">
               <caret column="6204" selection-start-column="6201" selection-end-column="6204" />
             </state>
           </provider>
@@ -69,7 +68,7 @@
       <file leaf-file-name="naverapi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/naverapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="1955">
               <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
               <folding>
                 <element signature="e#1#22#0" expanded="true" />
@@ -343,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532363441747</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="졸리다">
+      <created>1532371007834</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532371007834</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -380,21 +386,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.18229716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48946258" visible="true" weight="0.54525626" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49578503" weight="0.3991276" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49578503" weight="0.32824427" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5105374" side_tool="true" weight="0.54525626" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -405,7 +411,8 @@
     <MESSAGE value="xy좌표 -&gt; 주소 스트링 소스코드  완료&#10;&#10;Test 필요" />
     <MESSAGE value="test  완료 &#10;&#10;결과 &#10;    249/250 &#10;    &#10;오류 1" />
     <MESSAGE value="test 결과" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 결과" />
+    <MESSAGE value="졸리다" />
+    <option name="LAST_COMMIT_MESSAGE" value="졸리다" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -416,7 +423,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -697,14 +704,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AllLawdcd.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="138">
           <caret column="6204" selection-start-column="6201" selection-end-column="6204" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/naverapi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="1955">
           <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
@@ -714,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="170" column="46" selection-start-line="170" selection-start-column="46" selection-end-line="170" selection-end-column="46" />
+        <state relative-caret-position="1011">
+          <caret line="196" column="32" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="32" />
           <folding>
             <element signature="e#1#16#0" expanded="true" />
           </folding>

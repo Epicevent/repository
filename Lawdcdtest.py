@@ -16,6 +16,7 @@ def getSidoName(sidoCode):
         if sidoCodeDic['CODE'] == sidoCode:
             return sidoCodeDic['NAME']
     print('존재하지 않는 코드입니다.')
+    return '0'
 def getSidoCode(strSidoName):
 
     if type(strSidoName) is not str:
@@ -138,6 +139,7 @@ def searchLawdcdByAddress(addrstring):
         return retlist
     numItem = obj['result']['total']
     NORESULTCASEsidocodeList = list()
+    NORESULTCASEgugunnameList= list()
     NORESULTCASE = bool()
     for i in range (0,numItem):
         item = dict()
@@ -155,13 +157,18 @@ def searchLawdcdByAddress(addrstring):
         if lawdcd =='NORESULT' :
             NORESULTCASE = True
             NORESULTCASEsidocodeList.append(sidocode)
+            NORESULTCASEgugunnameList.append(GugunName)
         else:
             item['address'] = addr
             item['lawdcd'] = lawdcd
             retlist.append(item)
 
     if NORESULTCASE and numItem > 0:
-        for sidocodeitem in NORESULTCASEsidocodeList:
+        assert len(NORESULTCASEsidocodeList) == len (NORESULTCASEgugunnameList)
+        NumNRC = len(NORESULTCASEgugunnameList)
+        for i in range(0,NumNRC):
+            sidocodeitem = NORESULTCASEsidocodeList[i]
+            gugunNameitem= NORESULTCASEgugunnameList[i]
             InSidoAlist = addrlist(sidocodeitem)
             InSidoClist = codelist(sidocodeitem)
             InSidoElemNum= len(InSidoAlist)
@@ -169,6 +176,14 @@ def searchLawdcdByAddress(addrstring):
             for i in range (0,InSidoElemNum) :
                 itemforNORESULTCASE = dict( )
                 ManupulatedSearchingAddress = InSidoAlist[i]
+                if ManupulatedSearchingAddress == '충청북도 청주서원구':
+                    ManupulatedSearchingAddress = '충청북도 청주시 서원구'
+                if ManupulatedSearchingAddress == '충청북도 청주청원구':
+                    ManupulatedSearchingAddress = '충청북도 청주시 청원구'
+                if gugunNameitem[-1] =="시" and len(gugunNameitem)>2:
+                    gugunNameitem= gugunNameitem[0:-1]
+                if  ( gugunNameitem not in ManupulatedSearchingAddress):
+                    continue
                 lawdcdList = searchLawdcdByAddress(ManupulatedSearchingAddress)
                 if len(lawdcdList)>0:
                     itemforNORESULTCASE['address'] = lawdcdList[0]['address']
@@ -179,4 +194,4 @@ def searchLawdcdByAddress(addrstring):
     return retlist
 
 
-print( searchLawdcdByAddress("청주"))
+print( searchLawdcdByAddress('성남'))
