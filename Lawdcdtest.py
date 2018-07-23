@@ -1,6 +1,7 @@
 
 import requests
 import math
+import naverapi
 
 SidoCodeBook = ({'CODE':11 ,'NAME': '서울특별시'},{'CODE':26 ,'NAME': '부산광역시'},{'CODE':27,'NAME': '대구광역시'},
             {'CODE':28 ,'NAME': '인천광역시'},{'CODE':29 ,'NAME': '광주광역시'},{'CODE':30 ,'NAME': '대전광역시'},
@@ -40,6 +41,10 @@ def printAllGuGunNameInGuGunList(GuGunList):
 def getLawd_cdByNameInGuGunList(GuGunList, Name):
     if type(GuGunList) is not list:
          print('잘못된 매개변수 입니다. list type을 요구합니다. 현재 타입'+ str(type(GuGunList)))
+    # if GuGunList
+    if len(GuGunList)==1:
+       return GuGunList[0]['CODE']
+
     for GuGunDic in GuGunList:
         if (GuGunDic['NAME'] == Name):
             return GuGunDic['CODE']
@@ -61,6 +66,16 @@ def getLawd_cd_byUser():
     print(str(Lawd_Cd))
     return Lawd_Cd
 
+def naverGugunNameToRtGugunName (GugunName):
+    #청주시 상당구 -> 청주상당구
+    index = GugunName.find(' ')
+    if index == -1:
+        return GugunName
+
+    if GugunName[index -1] == "시" and index>1:
+        return GugunName[0:index-1] + GugunName[index+1:len(GugunName)]
+    else:
+        return GugunName[0:index] + GugunName[index+1:len(GugunName)]
 def getSidoList():
     return list(SidoCodeBook)
 
@@ -80,6 +95,19 @@ def codelist(codePartion):
             for gugunItem in gugunlist:
                 ret.append(int(gugunItem['CODE']))
 
+def getLawdcdListByXY(XYstring):
+    retList= list()
+    addrList = naverapi.XYtoAddressList(XYstring)
+    if len(addrList) == 0 :
+        print('주소를 지정할 수 없는 위치입니다. (대한민국내부인지 확인하세요)')
+        return  retList
+    detailAddrList = naverapi.AddressSearch(addrList[0])
+    for detailAddr in detailAddrList:
+        sidocode = getSidoCode(detailAddr['sido'])
+        Mygugunlist = getGuGunListBySidoCode(sidocode)
+        GugunName = naverGugunNameToRtGugunName(detailAddr['sigugun'])
+        lawdcd =getLawd_cdByNameInGuGunList(Mygugunlist,GugunName)
+        retList.append(lawdcd)
+    return retList
 
 
-print(codelist(11))
