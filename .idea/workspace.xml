@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d40a2e50-a636-4eee-8c5f-fbd192e5d60a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testresult.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lawdcdtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lawdcdtest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,14 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+            <state relative-caret-position="137">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testresult.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testresult.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -112,11 +120,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="easy_install.py" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/venv/Lib/site-packages/setuptools-39.1.0-py3.7.egg!/easy_install.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -157,6 +160,7 @@
         <option value="$PROJECT_DIR$/data.txt" />
         <option value="$PROJECT_DIR$/Lawdcdtest.py" />
         <option value="$PROJECT_DIR$/Test.py" />
+        <option value="$PROJECT_DIR$/testresult.txt" />
       </list>
     </option>
   </component>
@@ -319,7 +323,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532350146385</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test  완료 &#10;&#10;결과 &#10;    249/250 &#10;    &#10;오류 1">
+      <created>1532363173551</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532363173551</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test  완료 &#10;&#10;결과 &#10;    249/250 &#10;    &#10;오류 1">
+      <created>1532363324665</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532363324665</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -335,13 +353,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5105374" side_tool="true" weight="0.54525626" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48946258" visible="true" weight="0.54525626" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48946258" visible="true" weight="0.54525626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49578503" weight="0.32824427" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -379,7 +397,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="xy좌표 -&gt; 주소 스트링 소스코드" />
     <MESSAGE value="xy좌표 -&gt; 주소 스트링 소스코드  완료&#10;&#10;Test 필요" />
-    <option name="LAST_COMMIT_MESSAGE" value="xy좌표 -&gt; 주소 스트링 소스코드  완료&#10;&#10;Test 필요" />
+    <MESSAGE value="test  완료 &#10;&#10;결과 &#10;    249/250 &#10;    &#10;오류 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="test  완료 &#10;&#10;결과 &#10;    249/250 &#10;    &#10;오류 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,15 +413,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_internal/commands/install.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pip-10.0.1-py3.7.egg/pip/_vendor/packaging/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -699,11 +709,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+        <state relative-caret-position="137">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testresult.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
