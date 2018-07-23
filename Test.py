@@ -65,7 +65,8 @@ for i in range (0 , indexMax):
     else:
         ErrorIndexList.append(i)
 
+print('오류 개수' + str(len(ErrorIndexList)) +'\n')
 for i in ErrorIndexList:
-    print('오류' + str(i) +'\n')
+    print('오류번호' + str(i) +'\n')
     pprint (data[i])
     pprint (TestResult[i])
