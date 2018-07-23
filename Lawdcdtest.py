@@ -11,6 +11,11 @@ SidoCodeBook = ({'CODE':11 ,'NAME': '서울특별시'},{'CODE':26 ,'NAME': '부�
             {'CODE':45, 'NAME': '전라북도'},{'CODE':46, 'NAME': '전라남도'},{'CODE':47, 'NAME': '경상북도'},
             {'CODE':48, 'NAME': '경상남도'},{'CODE':50, 'NAME': '제주특별자치도'})
 
+def getSidoName(sidoCode):
+    for sidoCodeDic in SidoCodeBook:
+        if sidoCodeDic['CODE'] == sidoCode:
+            return sidoCodeDic['NAME']
+    print('존재하지 않는 코드입니다.')
 def getSidoCode(strSidoName):
 
     if type(strSidoName) is not str:
@@ -49,7 +54,7 @@ def getLawd_cdByNameInGuGunList(GuGunList, Name):
     for GuGunDic in GuGunList:
         if (GuGunDic['NAME'] == Name):
             return GuGunDic['CODE']
-
+    return 'NORESULT'
 
 
 def getLawd_cd_byUser():
@@ -80,21 +85,28 @@ def naverGugunNameToRtGugunName (GugunName):
 def getSidoList():
     return list(SidoCodeBook)
 
-def codelist(codePartion):
+def codelist(sidocode):
     ret = list()
-    if codePartion == 0:
-        return ret
     SidoList = getSidoList()
-    digits = int(math.log10(codePartion)) + 1
-    _5code = int(codePartion*(math.pow(10, 5-digits)))
-    sidoPart = int(_5code/1000) * 1000
     for sidoItem in SidoList :
-        sidocode = sidoItem['CODE']
-
-        if sidocode*1000 == sidoPart:
+        if sidocode ==sidoItem['CODE'] :
             gugunlist =getGuGunListBySidoCode(sidocode)
             for gugunItem in gugunlist:
                 ret.append(int(gugunItem['CODE']))
+            break
+    return ret
+
+def addrlist(sidocode):
+    ret = list()
+    SidoList = getSidoList()
+    for sidoItem in SidoList:
+        if sidocode == sidoItem['CODE']:
+            gugunlist = getGuGunListBySidoCode(sidocode)
+            for gugunItem in gugunlist:
+                ret.append(sidoItem['NAME']+' '+gugunItem['NAME'])
+    return ret
+
+
 def getAllGuGunList():
     gugunList = list()
     for sidoCodeDic in SidoCodeBook:
@@ -117,4 +129,54 @@ def getLawdcdListByXY(XYstring):
         retList.append(lawdcd)
     return retList
 
+def searchLawdcdBySidoCode(sidocode):
+    return 0
+def searchLawdcdByAddress(addrstring):
+    retlist = list()
+    obj = naverapi.geocode(addrstring)
+    if len(obj) == 0:
+        return retlist
+    numItem = obj['result']['total']
+    NORESULTCASEsidocodeList = list()
+    NORESULTCASE = bool()
+    for i in range (0,numItem):
+        item = dict()
+        detailAddr = obj['result']['items'][i]['addrdetail']
+        addr = obj['result']['items'][i]['address']
+        if detailAddr['sido'] == '':
+            item['address'] = addr
+            item['lawdcd'] = ''
+            retlist.append(item)
+            continue
+        sidocode = getSidoCode(detailAddr['sido'])
+        Mygugunlist = getGuGunListBySidoCode(sidocode)
+        GugunName = naverGugunNameToRtGugunName(detailAddr['sigugun'])
+        lawdcd = getLawd_cdByNameInGuGunList(Mygugunlist, GugunName)
+        if lawdcd =='NORESULT' :
+            NORESULTCASE = True
+            NORESULTCASEsidocodeList.append(sidocode)
+        else:
+            item['address'] = addr
+            item['lawdcd'] = lawdcd
+            retlist.append(item)
 
+    if NORESULTCASE and numItem > 0:
+        for sidocodeitem in NORESULTCASEsidocodeList:
+            InSidoAlist = addrlist(sidocodeitem)
+            InSidoClist = codelist(sidocodeitem)
+            InSidoElemNum= len(InSidoAlist)
+            assert (len(InSidoAlist) == len (InSidoClist))
+            for i in range (0,InSidoElemNum) :
+                itemforNORESULTCASE = dict( )
+                ManupulatedSearchingAddress = InSidoAlist[i]
+                lawdcdList = searchLawdcdByAddress(ManupulatedSearchingAddress)
+                if len(lawdcdList)>0:
+                    itemforNORESULTCASE['address'] = lawdcdList[0]['address']
+                    itemforNORESULTCASE['lawdcd'] = lawdcdList[0]['lawdcd']
+                    retlist.append(itemforNORESULTCASE)
+                else :
+                    print('다음 이름을 검색하던 중 오류가 발생 하였습니다.' + ManupulatedSearchingAddress)
+    return retlist
+
+
+print( searchLawdcdByAddress("청주"))

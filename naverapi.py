@@ -84,5 +84,5 @@ def XYtoAddrdetailList( XYstring ):
     return retlist
 
 if __name__ =="__main__":
-    print (XYtoAddrdetailList("126.1141382,36.5200968"))
-    print (geocode("전주시"))
+    print (XYtoAddrdetailList("125.9057, 37.484451"))
+    print (geocode("울릉군"))
