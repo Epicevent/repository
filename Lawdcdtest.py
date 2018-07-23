@@ -1,5 +1,13 @@
 
 import requests
+import math
+
+SidoCodeBook = ({'CODE':11 ,'NAME': '서울특별시'},{'CODE':26 ,'NAME': '부산광역시'},{'CODE':27,'NAME': '대구광역시'},
+            {'CODE':28 ,'NAME': '인천광역시'},{'CODE':29 ,'NAME': '광주광역시'},{'CODE':30 ,'NAME': '대전광역시'},
+            {'CODE':31, 'NAME': '울산광역시'},{'CODE':36 ,'NAME': '세종특별자치시'},{'CODE':41 ,'NAME': '경기도'},
+            {'CODE':42, 'NAME': '강원도'},{'CODE':43 ,'NAME': '충청북도'},{'CODE':44 ,'NAME': '충청남도'},
+            {'CODE':45, 'NAME': '전라북도'},{'CODE':46, 'NAME': '전라남도'},{'CODE':47, 'NAME': '경상북도'},
+            {'CODE':48, 'NAME': '경상남도'},{'CODE':50, 'NAME': '제주특별자치도'})
 
 def getSidoCode(strSidoName):
 
@@ -8,60 +16,9 @@ def getSidoCode(strSidoName):
     if type(strSidoName) is int:
         return strSidoName
 
-    # 서울특별시 11
-    # 부산광역시 26
-    # 대구광역시 27
-    # 인천광역시 28
-    # 광주광역시 29
-    # 대전광역시 30
-    # 울산광역시 31
-    # 세종특별자치시 36
-
-    if strSidoName == '서울특별시':
-        return 11
-    if strSidoName == '부산광역시':
-        return 26
-    if strSidoName == '대구광역시':
-        return 27
-    if strSidoName == '인천광역시':
-        return 28
-    if strSidoName == '광주광역시':
-        return 29
-    if strSidoName == '대전광역시':
-        return 30
-    if strSidoName == '울산광역시':
-        return 31
-    if strSidoName == '세종특별자치시':
-        return 36
-
-
-    # 경기도 41
-    # 강원도 42
-    # 충청북도 43
-    # 충청남도 44
-    # 전라북도 45
-    # 전라남도 46
-    # 경상북도 47
-    # 경상남도 48
-    # 제주특별자치도 50
-    if strSidoName == '경기도':
-        return 41
-    if strSidoName == '강원도':
-        return 42
-    if strSidoName == '충청북도':
-        return 43
-    if strSidoName == '충청남도':
-        return 44
-    if strSidoName == '전라북도':
-        return 45
-    if strSidoName == '전라남도':
-        return 46
-    if strSidoName == '경상북도':
-        return 47
-    if strSidoName == '경상남도':
-        return 48
-    if strSidoName == '제주특별자치도':
-        return 50
+    for sidoCodeDic in SidoCodeBook:
+        if sidoCodeDic['NAME'] == strSidoName:
+            return sidoCodeDic['CODE']
     print('정확한 이름을 입력하셔야 합니다.')
 
 
@@ -104,3 +61,25 @@ def getLawd_cd_byUser():
     print(str(Lawd_Cd))
     return Lawd_Cd
 
+def getSidoList():
+    return list(SidoCodeBook)
+
+def codelist(codePartion):
+    ret = list()
+    if codePartion == 0:
+        return ret
+    SidoList = getSidoList()
+    digits = int(math.log10(codePartion)) + 1
+    _5code = int(codePartion*(math.pow(10, 5-digits)))
+    sidoPart = int(_5code/1000) * 1000
+    for sidoItem in SidoList :
+        sidocode = sidoItem['CODE']
+
+        if sidocode*1000 == sidoPart:
+            gugunlist =getGuGunListBySidoCode(sidocode)
+            for gugunItem in gugunlist:
+                ret.append(int(gugunItem['CODE']))
+
+
+
+print(codelist(11))
