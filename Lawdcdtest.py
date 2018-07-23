@@ -2,6 +2,7 @@
 import requests
 import math
 import naverapi
+import json
 
 SidoCodeBook = ({'CODE':11 ,'NAME': '서울특별시'},{'CODE':26 ,'NAME': '부산광역시'},{'CODE':27,'NAME': '대구광역시'},
             {'CODE':28 ,'NAME': '인천광역시'},{'CODE':29 ,'NAME': '광주광역시'},{'CODE':30 ,'NAME': '대전광역시'},
@@ -94,6 +95,12 @@ def codelist(codePartion):
             gugunlist =getGuGunListBySidoCode(sidocode)
             for gugunItem in gugunlist:
                 ret.append(int(gugunItem['CODE']))
+def getAllGuGunList():
+    gugunList = list()
+    for sidoCodeDic in SidoCodeBook:
+        gugunList = gugunList + (getGuGunListBySidoCode(sidoCodeDic['CODE']))
+    return gugunList
+
 
 def getLawdcdListByXY(XYstring):
     retList= list()
