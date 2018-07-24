@@ -36,7 +36,7 @@ pprint(stringlist)
 
 TestResult=list()
 for TestInput in stringlist:
-    TestResult.append(Lawdcdtest.getLawdcdListByXY(TestInput))
+    TestResult.append(Lawdcdtest.XYtoLawdcdList(TestInput))
 
 print(TestResult)
 

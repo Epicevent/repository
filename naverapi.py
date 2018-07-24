@@ -53,7 +53,7 @@ def reversegeocode(XYstring):
 
 
 
-def AddressSearch (addressString):
+def getDetailAddrList (addressString):
     retlist = list()
     obj = geocode(addressString)
     if len(obj) == 0:

@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import requests
 import Lawdcdtest
 
-lawd_cd = Lawdcdtest.getLawd_cd_byUser()
+lawd_cd = Lawdcdtest.getLawdcd_By_User()
 
 deal_ymd = input('yyyydd형식으로 조회하고 싶은 달을 입력하시오 '
                      'ex) 201512')
