@@ -12,6 +12,13 @@ SidoCodeBook = ({'CODE':11 ,'NAME': '서울특별시'},{'CODE':26 ,'NAME': '부�
             {'CODE':48, 'NAME': '경상남도'},{'CODE':50, 'NAME': '제주특별자치도'})
 
 def sidocode_To_Sidoname(sidoCode):
+    '''
+    Input SidoCode : integer
+    Output SidoName : string
+
+    if there is no Sidoname in SidoCodeBook
+        return 'NONAME'
+    '''
     for sidoCodeDic in SidoCodeBook:
         if sidoCodeDic['CODE'] == sidoCode:
             return sidoCodeDic['NAME']
