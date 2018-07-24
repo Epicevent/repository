@@ -4,11 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/Lawdcd.py" line="85" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d40a2e50-a636-4eee-8c5f-fbd192e5d60a" name="Default" comment="Refactoring">
+    <list default="true" id="d40a2e50-a636-4eee-8c5f-fbd192e5d60a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lawdcdtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lawdcd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParseXml.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParseXml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lawdcd.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Lawdcd.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lawdcd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="196" column="31" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
+            <state relative-caret-position="-3827">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
                 <element signature="e#1#16#0" expanded="true" />
               </folding>
@@ -67,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="naverapi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="naverapi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/naverapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="84" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="84" />
+            <state relative-caret-position="183">
+              <caret line="85" selection-start-line="85" selection-end-line="85" selection-end-column="25" />
               <folding>
                 <element signature="e#1#22#0" expanded="true" />
               </folding>
@@ -161,6 +158,7 @@
         <option value="$PROJECT_DIR$/testresult.txt" />
         <option value="$PROJECT_DIR$/naverapi.py" />
         <option value="$PROJECT_DIR$/Lawdcdtest.py" />
+        <option value="$PROJECT_DIR$/Lawdcd.py" />
       </list>
     </option>
   </component>
@@ -392,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532400444179</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="COOM">
+      <created>1532428115210</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1532428115210</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -407,42 +412,53 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32897604" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5110643" side_tool="true" weight="0.54525626" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50421494" side_tool="true" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4889357" visible="true" weight="0.54525626" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" sideWeight="0.49578503" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.4910432" weight="0.46782988" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4873551" weight="0.54525626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49578503" weight="0.32824427" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49315068" weight="0.32824427" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49578503" weight="0.3991276" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49525815" weight="0.3991276" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4889357" visible="true" weight="0.54525626" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49578503" weight="0.3991276" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5110643" side_tool="true" weight="0.54525626" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49578503" weight="0.32824427" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.18229716" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48946258" visible="true" weight="0.54525626" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49578503" weight="0.3991276" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49578503" weight="0.32824427" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5105374" side_tool="true" weight="0.54525626" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -456,7 +472,8 @@
     <MESSAGE value="졸리다" />
     <MESSAGE value="다음 test는 주소 검색기능입니다." />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="COOM" />
+    <option name="LAST_COMMIT_MESSAGE" value="COOM" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -755,8 +772,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="196" column="31" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
+        <state relative-caret-position="-3827">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
           <folding>
             <element signature="e#1#16#0" expanded="true" />
           </folding>
@@ -765,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/naverapi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="84" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="84" />
+        <state relative-caret-position="183">
+          <caret line="85" selection-start-line="85" selection-end-line="85" selection-end-column="25" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
           </folding>
