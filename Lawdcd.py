@@ -192,6 +192,6 @@ def getLawcdAddrList(addrstring, RecursiveUsage = True):
                 else :
                     print('다음 이름을 검색하던 중 오류가 발생 하였습니다.' + ManupulatedSearchingAddress)
     return retlist
-
-print(XYtoLawdcdList("127.4374361, 36.3445416"))
-print(getLawcdAddrList('신림동 520 - 19'))
+if __name__ =="__main__":
+    print(XYtoLawdcdList("127.4374361, 36.3445416"))
+    print(getLawcdAddrList('신림동 520 - 19'))
