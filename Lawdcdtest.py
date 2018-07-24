@@ -97,7 +97,7 @@ def sidocode_To_LawcdcodeList(sidocode):
             break
     return ret
 
-def addrlist(sidocode):
+def sidocode_To_SubaddrList(sidocode):
     ret = list()
     SidoList = getSidoList()
     for sidoItem in SidoList:
@@ -168,7 +168,7 @@ def getLawcdAddrList(addrstring):
         for i in range(0,NumNRC):
             sidocodeitem = NORESULTCASEsidocodeList[i]
             gugunNameitem= NORESULTCASEgugunnameList[i]
-            InSidoAlist = addrlist(sidocodeitem)
+            InSidoAlist = sidocode_To_SubaddrList(sidocodeitem)
             InSidoClist = sidocode_To_LawcdcodeList(sidocodeitem)
             InSidoElemNum= len(InSidoAlist)
             assert (len(InSidoAlist) == len (InSidoClist))
