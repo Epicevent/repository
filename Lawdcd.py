@@ -12,6 +12,13 @@ SidoCodeBook = ({'CODE':11 ,'NAME': '서울특별시'},{'CODE':26 ,'NAME': '부�
             {'CODE':48, 'NAME': '경상남도'},{'CODE':50, 'NAME': '제주특별자치도'})
 
 def sidocode_To_Sidoname(sidoCode):
+    '''
+    :param sidoCode:
+    :return: sidoName (string)
+
+    만약 검색 결과가 아무것도 없으면
+        return 'NONAME'
+    '''
     for sidoCodeDic in SidoCodeBook:
         if sidoCodeDic['CODE'] == sidoCode:
             return sidoCodeDic['NAME']
@@ -192,6 +199,6 @@ def getLawcdAddrList(addrstring, RecursiveUsage = True):
                 else :
                     print('다음 이름을 검색하던 중 오류가 발생 하였습니다.' + ManupulatedSearchingAddress)
     return retlist
-
-print(XYtoLawdcdList("127.4374361, 36.3445416"))
-print(getLawcdAddrList('신림동 520 - 19'))
+if __name__ == '__main__':
+    print(XYtoLawdcdList("127.4374361, 36.3445416"))
+    print(getLawcdAddrList('신림동 520 - 19'))
