@@ -1,5 +1,5 @@
 import json
-import Lawdcdtest
+import Lawdcd
 
 import json
 from pprint import pprint
@@ -36,7 +36,7 @@ pprint(stringlist)
 
 TestResult=list()
 for TestInput in stringlist:
-    TestResult.append(Lawdcdtest.XYtoLawdcdList(TestInput))
+    TestResult.append(Lawdcd.XYtoLawdcdList(TestInput))
 
 print(TestResult)
 

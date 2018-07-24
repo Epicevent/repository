@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Lawdcdtest.py" line="85" />
+    <bookmark url="file://$PROJECT_DIR$/Lawdcd.py" line="85" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d40a2e50-a636-4eee-8c5f-fbd192e5d60a" name="Default" comment="">
+    <list default="true" id="d40a2e50-a636-4eee-8c5f-fbd192e5d60a" name="Default" comment="Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lawdcdtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lawdcdtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lawdcdtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lawdcd.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParseXml.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParseXml.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naverapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/naverapi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Lawdcdtest.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
+      <file leaf-file-name="Lawdcd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lawdcd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="181" column="31" selection-start-line="181" selection-start-column="31" selection-end-line="181" selection-end-column="31" />
+            <state relative-caret-position="206">
+              <caret line="196" column="31" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
               <folding>
                 <element signature="e#1#16#0" expanded="true" />
               </folding>
@@ -68,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="naverapi.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="naverapi.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/naverapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="75" column="8" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="8" />
+            <state relative-caret-position="666">
+              <caret line="84" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="84" />
               <folding>
                 <element signature="e#1#22#0" expanded="true" />
               </folding>
@@ -225,7 +224,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lawdcdtest.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\김현기\PycharmProjects\untitled\Lawdcd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -297,7 +296,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\김현기\PycharmProjects\untitled\Lawdcdtest.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\김현기\PycharmProjects\untitled\Lawdcd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -379,7 +378,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532373144345</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactoring">
+      <created>1532400224595</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1532400224595</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactoring">
+      <created>1532400444179</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1532400444179</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -393,15 +406,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5110643" side_tool="true" weight="0.54525626" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49947312" weight="0.3293348" />
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49209693" weight="0.46782988" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4889357" weight="0.54525626" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4889357" visible="true" weight="0.54525626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49578503" weight="0.32824427" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -443,7 +455,8 @@
     <MESSAGE value="test 결과" />
     <MESSAGE value="졸리다" />
     <MESSAGE value="다음 test는 주소 검색기능입니다." />
-    <option name="LAST_COMMIT_MESSAGE" value="다음 test는 주소 검색기능입니다." />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -471,7 +484,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
+    <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
@@ -513,7 +526,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
+    <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
@@ -555,7 +568,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
+    <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2052">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
@@ -597,7 +610,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
+    <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
@@ -632,7 +645,7 @@
     <entry file="jar://$PROJECT_DIR$/venv/Lib/site-packages/setuptools-39.1.0-py3.7.egg!/easy_install.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
+    <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
@@ -740,22 +753,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/naverapi.py">
+    <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="8" />
+        <state relative-caret-position="206">
+          <caret line="196" column="31" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
           <folding>
-            <element signature="e#1#22#0" expanded="true" />
+            <element signature="e#1#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lawdcdtest.py">
+    <entry file="file://$PROJECT_DIR$/naverapi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="181" column="31" selection-start-line="181" selection-start-column="31" selection-end-line="181" selection-end-column="31" />
+        <state relative-caret-position="666">
+          <caret line="84" lean-forward="true" selection-start-line="83" selection-start-column="18" selection-end-line="84" />
           <folding>
-            <element signature="e#1#16#0" expanded="true" />
+            <element signature="e#1#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

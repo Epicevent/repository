@@ -131,7 +131,7 @@ def XYtoLawdcdList(XYstring):
         retList.append(lawdcd)
     return retList
 
-def getLawcdAddrList(addrstring):
+def getLawcdAddrList(addrstring, RecursiveUsage = True):
     retlist = list()
     obj = naverapi.geocode(addrstring)
     if len(obj) == 0:
@@ -153,7 +153,7 @@ def getLawcdAddrList(addrstring):
         Mygugunlist = sidocode_To_GugunList(sidocode)
         GugunName = naverGugunName_To_MoritGugunName(detailAddr['sigugun'])
         lawdcd = getLawdcd_In_GuGunList(Mygugunlist, GugunName)
-        if lawdcd =='NORESULT' :
+        if lawdcd =='NORESULT' and RecursiveUsage :
             NORESULTCASE = True
             NORESULTCASEsidocodeList.append(sidocode)
             NORESULTCASEgugunnameList.append(GugunName)
@@ -162,7 +162,7 @@ def getLawcdAddrList(addrstring):
             item['lawdcd'] = lawdcd
             retlist.append(item)
 
-    if NORESULTCASE and numItem > 0:
+    if NORESULTCASE and RecursiveUsage and numItem > 0:
         assert len(NORESULTCASEsidocodeList) == len (NORESULTCASEgugunnameList)
         NumNRC = len(NORESULTCASEgugunnameList)
         for i in range(0,NumNRC):
@@ -183,7 +183,7 @@ def getLawcdAddrList(addrstring):
                     gugunNameitem= gugunNameitem[0:-1]
                 if  ( gugunNameitem not in ManupulatedSearchingAddress):
                     continue
-                lawdcdList = getLawcdAddrList(ManupulatedSearchingAddress)
+                lawdcdList = getLawcdAddrList(ManupulatedSearchingAddress,False)
                 if len(lawdcdList)>0:
                     for lawdcdItem in lawdcdList:
                         itemforNORESULTCASE['address'] = lawdcdItem['address']
@@ -194,4 +194,4 @@ def getLawcdAddrList(addrstring):
     return retlist
 
 print(XYtoLawdcdList("127.4374361, 36.3445416"))
-print(getLawcdAddrList('성남'))
+print(getLawcdAddrList('신림동 520 - 19'))
