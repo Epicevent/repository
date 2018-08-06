@@ -200,5 +200,6 @@ def getLawcdAddrList(addrstring, RecursiveUsage = True):
                     print('다음 이름을 검색하던 중 오류가 발생 하였습니다.' + ManupulatedSearchingAddress)
     return retlist
 if __name__ == '__main__':
-    print(XYtoLawdcdList("127.4374361, 36.3445416"))
-    print(getLawcdAddrList('신림동 520 - 19'))
+    print(XYtoLawdcdList("127.6415038, 35.2292888"))
+    print(getLawcdAddrList('경기도 과천시 과천동 산118-1'))
+    print(sidocode_To_SubaddrList(30))

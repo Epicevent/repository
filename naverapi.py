@@ -1,6 +1,31 @@
-
+from PIL import Image
 import urllib.request
 import json    # or `import simplejson as json` if on Python < 2.6
+
+def staticmap(center,level=12,w=640,h=640,baselayer='default'):
+    '''
+    :param center:(XYstring)이미지의 중심 좌표(X좌표, Y좌표)이다. 이 중심 좌표를 기준으로 요청한 w, h 픽셀 크기로 이미지를 생성한다.
+    :param level: (integer) 	네이버지도 서비스에 정의되어 있는 줌 레벨이다. 최소1레벨 최대14레벨까지 지원한다.
+    :param w: (integer) 가로 이미지 크기(픽셀 단위)이다. 최소 1 ~ 최대 640 픽셀 지원
+    :param h: (integer)  세로 이미지 크기(픽셀 단위)이다. 최소 1 ~ 최대 640 픽셀 지원
+    :param baselayer:
+                       'default' : 일반 지도
+                       'satellite' : 위성 지도
+                       'bl_vc_bg' : 주기가 없는 배경 지도
+    :return:요청 변수들에 맞게 한 장의 이미지 파일(png나 jpeg)을 반환합니다.
+    '''
+
+    client_id = "XORQXLjnF_42QQm3fDA2"
+    myURL = 'http://naver.com'
+    url = str('https://openapi.naver.com/v1/map/staticmap.bin?clientId='+ client_id
+              +'&url='+ myURL
+              + '&center='+center
+              + '&level=14&w='+str(w)+'&h='+str(h)
+              +  '&baselayer='+baselayer)
+
+    imageByte =  urllib.request.urlopen(url).read()
+
+    return imageByte
 
 def geocode(addressString):
     obj = dict()
@@ -83,6 +108,10 @@ def XYtoAddrdetailList( XYstring ):
         retlist.append(obj['result']['items'][i]['addrdetail'])
     return retlist
 
+
+
 if __name__ =="__main__":
-    print (XYtoAddrdetailList("125.9057, 37.484451"))
-    print (geocode("울릉군"))
+    print (XYtoAddrdetailList("126.8397859,37.4991205"))
+    print (geocode("서울특별시 구로구 오류동 338"))
+    data=staticmap("126.8397859,37.4991205")
+    print(data)
