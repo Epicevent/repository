@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d40a2e50-a636-4eee-8c5f-fbd192e5d60a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naverapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/naverapi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/testGUI.py" afterDir="false" />
     </list>
     <ignored path="C:\Users\김현기\PycharmProjects\untitled\.idea\shelf/" />
@@ -22,7 +21,7 @@
       <file leaf-file-name="Lawdcd.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lawdcd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1977">
+            <state relative-caret-position="4600">
               <caret line="203" column="46" selection-start-line="203" selection-start-column="46" selection-end-line="203" selection-end-column="46" />
               <folding>
                 <element signature="e#1#16#0" expanded="true" />
@@ -48,7 +47,7 @@
       <file leaf-file-name="Test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
+            <state relative-caret-position="69">
               <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
@@ -63,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="naverapi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="naverapi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/naverapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2346">
-              <caret line="135" column="37" lean-forward="true" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="37" />
+            <state relative-caret-position="3013">
+              <caret line="135" column="37" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="37" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -83,7 +82,7 @@
       <file leaf-file-name="ParseXml.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ParseXml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
+            <state relative-caret-position="46">
               <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="36" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -92,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testGUI.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testGUI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+            <state relative-caret-position="229">
+              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -164,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,6 +174,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533559464269</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="GUI test">
+      <created>1533609194048</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1533609194048</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -425,12 +431,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229716" />
       <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.49947312" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5110643" side_tool="true" weight="0.54525626" />
       <window_info anchor="bottom" id="Version Control" order="17" sideWeight="0.49947312" weight="0.3293348" />
       <window_info anchor="bottom" id="Python Console" order="15" sideWeight="0.49209693" weight="0.46782988" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.4889357" visible="true" weight="0.54525626" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.4889357" visible="true" weight="0.54525626" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="16" sideWeight="0.49578503" weight="0.32824427" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -457,7 +463,8 @@
     <MESSAGE value="다음 test는 주소 검색기능입니다." />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="COOM" />
-    <option name="LAST_COMMIT_MESSAGE" value="COOM" />
+    <MESSAGE value="GUI test" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -468,7 +475,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="56" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -672,24 +679,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
+        <state relative-caret-position="69">
           <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ParseXml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="46">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="36" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -699,7 +696,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Lawdcd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1977">
+        <state relative-caret-position="4600">
           <caret line="203" column="46" selection-start-line="203" selection-start-column="46" selection-end-line="203" selection-end-column="46" />
           <folding>
             <element signature="e#1#16#0" expanded="true" />
@@ -709,10 +706,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/naverapi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="135" column="37" lean-forward="true" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="37" />
+        <state relative-caret-position="3013">
+          <caret line="135" column="37" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="37" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
