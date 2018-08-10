@@ -1,7 +1,7 @@
 from tkinter import *
 import naverapi
-from PIL import ImageTk ,Image
-import math
+from PIL import ImageTk
+from threading import Lock
 
 
 class App:
@@ -11,7 +11,7 @@ class App:
         frame = Frame(master)
         master.geometry("1000x800")
         frame.pack()
-
+        self.lock = Lock()# to sync drawing Map
         self.XYstring = "126.8397859,37.4991205"
         self.xyStrToxyfloats()
         self.displaylevel = 12
@@ -33,6 +33,7 @@ class App:
         helpmenu = Menu(menu)
         menu.add_cascade(label="Help", menu=helpmenu)
         helpmenu.add_command(label="XY좌표", command=self.xyStrToxyfloats)
+        helpmenu.add_command(label="DisLevel", command=lambda :print(str(self.displaylevel)))
 
 
     def xyStrToxyfloats(self):
@@ -42,9 +43,12 @@ class App:
         self.Xcoord= float(xstr)
         self.Ycoord= float(ystr)
     def drawMap(self):
+        self.lock.acquire()
         self.pilImage = naverapi.staticmap(self.XYstring,self.displaylevel)
+
         self.MapImage = ImageTk.PhotoImage(self.pilImage)
         self.naverMapCanvas.create_image(320, 320, image=self.MapImage)
+        self.lock.release()
     def xy(self,event):
         self.lastx, self.lasty = event.x, event.y
 
@@ -53,7 +57,9 @@ class App:
         newx=self.CaculateNewXY(dxdy)[0]
         newy=self.CaculateNewXY(dxdy)[1]
         self.XYstring=str(newx) + ',' + str(newy)
+
         self.drawMap()
+
         self.lastx, self.lasty = event.x, event.y
     def CaculateNewXY(self,dxdy):
         self.xyStrToxyfloats()
@@ -65,14 +71,12 @@ class App:
         dxdy = (event.x-320,  320-event.y)
         mouseCoordx = self.CaculateNewXY(dxdy)[0]
         mouseCoordy = self.CaculateNewXY(dxdy)[1]
-        if (event.delta>0):
-            self.displaylevel = self.displaylevel + 1
+        if (event.delta>0 ):
+            self.displaylevel = naverapi.displayLevel(self.displaylevel + 1)
             self.XYstring = str((self.Xcoord + mouseCoordx)/2) + ',' + str((self.Ycoord + mouseCoordy)/2)
         else:
-            self.displaylevel = self.displaylevel - 1
+            self.displaylevel = naverapi.displayLevel(self.displaylevel - 1)
             self.XYstring = str(2 * self.Xcoord - mouseCoordx) + ',' + str(2 * self.Ycoord - mouseCoordy)
-
-
 
         self.drawMap()
 

@@ -4,6 +4,7 @@ import requests
 import json    # or `import simplejson as json` if on Python < 2.6
 import io
 
+
 def staticmap(center,level=12,w=640,h=640,baselayer='default',crs='EPSG:4258'):
 
     '''
@@ -48,6 +49,7 @@ def staticmap(center,level=12,w=640,h=640,baselayer='default',crs='EPSG:4258'):
     return image
 
 
+
 def geocode(addressString):
     obj = dict()
     client_id = "XORQXLjnF_42QQm3fDA2"
@@ -72,6 +74,15 @@ def geocode(addressString):
         else:
             print("Error Code:" + rescode)
     return obj
+
+def displayLevel(level) :
+    if (level<-1):
+        return -1
+    elif (level>16):
+        return 16
+    else:
+        return level
+
 
 
 def reversegeocode(XYstring):
@@ -135,4 +146,3 @@ if __name__ =="__main__":
     print (XYtoAddrdetailList("126.8397859,37.4991205"))
     print (geocode("서울특별시 구로구 오류동 338"))
     staticmap("126.8397859,37.4991205")
-
