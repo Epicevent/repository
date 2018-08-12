@@ -1,11 +1,11 @@
 from tkinter import *
 import naverapi
-from PIL import ImageTk
+from PIL import ImageTk,Image
 from threading import Lock
-
+import io
+from functools import partial
 
 class App:
-
     def __init__(self, master):
         master.option_add('*tearOff', FALSE)
         frame = Frame(master)
@@ -14,19 +14,26 @@ class App:
         self.lock = Lock()# to sync drawing Map
         self.XYstring = "126.8397859,37.4991205"
         self.xyStrToxyfloats()
-        self.displaylevel = 12
+        self.displaylevel = 16
         self.naverMapCanvas = Canvas(frame,width=640, height=640)
         self.naverMapCanvas.pack()
         self.naverMapCanvas.bind("<Button-1>", self.xy)
         self.naverMapCanvas.bind("<B1-Motion>", self.moveMap)
         self.naverMapCanvas.bind("<MouseWheel>",self.zoomMap)
+        self.addrShow = Label(frame, text=self.XYstring + "\nLevel=" + str(self.displaylevel), width=91, height=20)
+        self.addrShow.pack()
+
+
+
         self.lastx, self.lasty = 0, 0
         menu = Menu(master)
         master.config(menu=menu)
         filemenu = Menu(menu)
         menu.add_cascade(label="Map", menu=filemenu)
         filemenu.add_command(label="drawMap", command=self.drawMap)
-        filemenu.add_command(label="Open...", command=callback)
+
+        action_with_arg = partial(self.MoveMapwhileUnchanged, (1,1))
+        filemenu.add_command(label="adrMap", command=action_with_arg)
         filemenu.add_separator()
         filemenu.add_command(label="Exit", command=callback)
 
@@ -44,8 +51,8 @@ class App:
         self.Ycoord= float(ystr)
     def drawMap(self):
         self.lock.acquire()
-        self.pilImage = naverapi.staticmap(self.XYstring,self.displaylevel)
-
+        bytestream =naverapi.staticmap(self.XYstring, self.displaylevel)
+        self.pilImage = Image.open(io.BytesIO(bytestream))
         self.MapImage = ImageTk.PhotoImage(self.pilImage)
         self.naverMapCanvas.create_image(320, 320, image=self.MapImage)
         self.lock.release()
@@ -61,6 +68,8 @@ class App:
         self.drawMap()
 
         self.lastx, self.lasty = event.x, event.y
+        self.addrShow.configure(text=self.XYstring + "\nLevel=" + str(self.displaylevel))
+
     def CaculateNewXY(self,dxdy):
         self.xyStrToxyfloats()
         newx=self.Xcoord + pow(2,-self.displaylevel)*dxdy[0]*0.04625
@@ -79,6 +88,18 @@ class App:
             self.XYstring = str(2 * self.Xcoord - mouseCoordx) + ',' + str(2 * self.Ycoord - mouseCoordy)
 
         self.drawMap()
+        self.addrShow.configure(text=self.XYstring + "\nLevel=" + str(self.displaylevel))
+
+
+
+
+
+    def MoveMapwhileUnchanged(self,virtualdirection):
+        NaverCoordiNa = naverapi.NaverCoordiNa(self.displaylevel,self.XYstring)
+        newCoordiNa=NaverCoordiNa.getSameNaverCoordiNa(virtualdirection)
+        self.XYstring = newCoordiNa.XYstring
+        self.drawMap()
+        self.addrShow.configure(text=self.XYstring + "\nLevel=" + str(self.displaylevel))
 
 def callback():
             print("called the callback!")
