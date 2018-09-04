@@ -19,6 +19,7 @@ def sidocode_To_Sidoname(sidoCode):
     만약 검색 결과가 아무것도 없으면
         return 'NONAME'
     '''
+    sidoCode = int(sidoCode)
     for sidoCodeDic in SidoCodeBook:
         if sidoCodeDic['CODE'] == sidoCode:
             return sidoCodeDic['NAME']
@@ -138,6 +139,16 @@ def XYtoLawdcdList(XYstring):
         retList.append(lawdcd)
     return retList
 
+
+def lawcd_to_addrstring(lawcd):
+    str_lawcd = str(lawcd)
+    str_sido = str_lawcd[0:2]
+    sidoname = sidocode_To_Sidoname(str_sido)
+    gugunlist = sidocode_To_GugunList(str_sido)
+    for gugunItem in gugunlist:
+        if gugunItem['CODE'] == str_lawcd:
+            return sidoname + ' ' +  gugunItem['NAME']
+
 def getLawcdAddrList(addrstring, RecursiveUsage = True):
     retlist = list()
     obj = naverapi.geocode(addrstring)
@@ -203,3 +214,4 @@ if __name__ == '__main__':
     print(XYtoLawdcdList("127.6415038, 35.2292888"))
     print(getLawcdAddrList('경기도 과천시 과천동 산118-1'))
     print(sidocode_To_SubaddrList(30))
+    print(lawcd_to_addrstring(41290))
