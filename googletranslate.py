@@ -1,23 +1,13 @@
-import sys
-from bs4 import BeautifulSoup
-import urllib
-from urllib.request import urlopen
+import naverapi
+f =open('bubjungdong.txt',"r",encoding="utf-8")
+strs = f.readline()
 
-
-def translate(word):
-    data = {'sl': 'ko', 'tl': 'en', 'text': 'word'}
-    data['text'] = word
-
-    querystring = urllib.parse.urlencode( data )
-    request =  urllib.request.Request( 'http://www.translate.google.com' + '?' + querystring )
-
-    request.add_header( 'User-Agent',
-                        'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11' )
-    opener = urllib.request.build_opener()
-    feeddata = opener.open( request ).read()
-    soup = BeautifulSoup( feeddata )
-    return soup.find( 'span', id="result_box" ).get_text()
-
-
-word = input( '번역할 문장을 입력하세요. : ' )
-print (translate(  word ))
+with open('parsed.txt', 'w',encoding="utf-8") as thefile:
+    while strs :
+        strs = f.readline()
+        if strs.find("폐지") is -1:
+            print( strs[11:-4],end="" ,file=thefile)
+            print(":  ",end="",file=thefile)
+            print(naverapi.papago(strs[11:-4])["message"]["result"]["translatedText"],file=thefile)
+        else:
+            pass

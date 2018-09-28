@@ -236,6 +236,24 @@ class NaverCoordiNa (coord.CoordiNa):
 def diff(mapcontent1,mapcontent2):
     return mapcontent1 != mapcontent2
 
+def papago(encText):
+    client_id = "jN3iskT5nBQnh6SHglvS"
+    client_secret = "lyiV2Fyjqq"
+
+    data = "source=ko&target=en&text=" + encText
+    url = "https://openapi.naver.com/v1/language/translate"
+    requesturl = urllib.request.Request(url)
+    requesturl.add_header("X-Naver-Client-Id", client_id)
+    requesturl.add_header("X-Naver-Client-Secret", client_secret)
+    response =urllib.request.urlopen(requesturl, data = data.encode("utf-8"))
+    rescode = response.getcode()
+    if rescode == 200:
+        response_body = response.read()
+        return json.loads(response_body.decode('utf-8'))
+    else:
+        return "Error Code:" + rescode
+
 if __name__ =="__main__":
     print (XYtoAddrdetailList("126.8397859,37.4991205"))
     print (geocode("서울특별시 구로구 오류동 338"))
+    print(papago("성산동")["message"]["result"]["translatedText"])
